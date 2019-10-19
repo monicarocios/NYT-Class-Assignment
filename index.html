@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  
+
+  <div id="gifs-appear-here">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      const queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=B8tBt9950sdwkq3BmRQ4AtSJPMLImp13"
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+        .then(function(response) {
+          let results = response.data;
+          console.log(response);
+        });
+  </script>
+</body>
+
+</html>
